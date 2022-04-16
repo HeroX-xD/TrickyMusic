@@ -1,0 +1,59 @@
+{
+    "name": "TrickyAbhi-Music",
+    "logo": "",
+    "description": "TrickyAbhi-Music allow you to stream music trought the telegram voice chat feature.",
+    "keywords": [
+        "music", 
+        "voice chat", 
+        "telegram"
+    ],
+    "repository": "https://github.com/SJMxADITI/TrickyAbhi-Music",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "fill with the pyrogram session string",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "fill with your bot token from @BotFather",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "fill with your bot username from @BotFather Note put without '@' ",
+            "required": true
+        },
+        
+        "API_ID": {
+            "description": "your Api ID from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "your Api Hash from my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "fill with the user id who can access all function in your bot (separate with space) .",
+            "value": "5124507794 5198403647",
+            "required": true
+        }
+        
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
