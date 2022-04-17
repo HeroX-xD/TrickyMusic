@@ -42,6 +42,136 @@ async def cbmenu(_, query: CallbackQuery):
          )
     else:
         await query.answer("❌ nothing is currently streaming", show_alert=True)
+        
+        
+#start
+
+
+
+@Client.on_callback_query(filters.regex("cb_start"))
+async def cb_start(_, query: CallbackQuery):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/a82f511eb98f58a685e32.jpg",
+        caption=f"""ʜᴇʟʟᴏ✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
+ **ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ɢʀᴏᴜᴘ ᴠɪᴅᴇᴏ ᴄᴀʟʟ !!**
+ **ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ 💫**
+ **ғᴏʀ ᴀɴʏ ʜᴇʟᴘ ᴊᴏɪɴ @Techno_Trickop**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⛓ Aᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ Gʀᴏᴜᴘ",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                    )
+                ],
+                [InlineKeyboardButton(
+                    "• Cᴏᴍᴍᴀɴᴅs", callback_data="cb_cmd"),],
+                [
+                    InlineKeyboardButton("• Oᴡɴᴇʀ", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("• Dᴇᴠᴇʟᴏᴘᴇʀ ", url=f"https://t.me/herox_xd"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "• Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "• Sᴏᴜʀᴄᴇ Cᴏᴅᴇ •", url="https://github.com/SJMxADITI/TrickyMusic"
+                    )
+                ],
+            ]
+        ),
+    )
+
+    
+    
+    
+    #Help command
+    
+    
+@Client.on_callback_query(filters.regex("cb_cmd"))
+async def cb_cmd(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""✨ **Hello !**
+» **ғᴏʀ ᴀɴʏ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅ ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴs 🔭 !**
+⚡ Powered by [H E R O X](https://t.me/Herox_xd)""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("sᴏᴍᴇ ʙᴀsɪᴄ ᴄᴏᴍᴍᴀɴᴅ", callback_data="cb_basic"),
+                    InlineKeyboardButton("sᴏᴍᴇ ᴀᴅᴠᴀɴᴄᴇ ᴄᴏᴍᴍᴀɴᴅs", callback_data="cb_advance"),
+                ],
+                [InlineKeyboardButton("sᴏᴍᴇ ғᴜɴ ᴄᴏᴍᴍᴀɴᴅ", callback_data="cb_fun")],
+               
+                [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cb_start")],
+            ]
+        ),
+    )
+    
+@Client.on_callback_query(filters.regex("cb_basic"))
+async def cb_basic(_, query: CallbackQuery):
+    await query.edit_message_text(  
+        f"""𝙎𝙞𝙢𝙥𝙡𝙚 𝙘𝙤𝙢𝙢𝙖𝙣𝙙 
+        
+        
+•  `/play (song name)` 
+•  `/skip` - skip the current song
+•  `/end` - stop music play
+•  `/pause` - pause song play
+•  `/resume` - resume song play
+•  `/mute` - mute assistant in vc
+•  `/lyrics (song name)`
+
+⚡ Powered By [H E R O X](https://t.me/herox_xd) .""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cb_cmd")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("cb_advance"))
+async def cb_advance(_, query: CallbackQuery):
+    await query.edit_message_text(    
+      f"""𝙀𝙭𝙩𝙧𝙖 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙨
+• `/ping` pong !!
+• `/start` - Alive msg ~group 
+• `/id` - Find out your grp and your id // stickers id also
+• `/uptime` - 💻
+• `/rmd` clean all downloads
+• `/clean` - clear storage 
+
+⚡ Powered By [H E R O X](https://t.me/herox_xd) .""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cb_cmd")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("cb_fun"))
+async def cb_fun(_, query: CallbackQuery):
+    await query.edit_message_text(  
+        f"""𝙁𝙪𝙣 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨
+• `/truth` 🌝
+• `/dare`  🌝
+• `/sjm`    🌝
+• `/abhi`   🌝
+• `/tricky` 🌝   
+
+⚡ Powered By [H E R O X](https://t.me/herox_xd) .""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cb_cmd")]]
+        ),
+    )
+        
+
+    
+    
+    
+        
 
 
 @Client.on_callback_query(filters.regex("cls"))
