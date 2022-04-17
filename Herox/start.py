@@ -85,7 +85,6 @@ async def start_private(client: Client, message: Message):
                 ],
             ]
         ),
-        disable_web_page_preview=True,
     )
 
 
