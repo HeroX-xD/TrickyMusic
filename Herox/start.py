@@ -50,8 +50,9 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_private(client: Client, message: Message):
-    await message.reply_text(
-        f"""ʜᴇʟʟᴏ [✨](https://telegra.ph/file/efb55cb8e4fe3ff5507bd.jpg) **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
+ await message.reply_photo(
+        photo=f"https://telegra.ph/file/a82f511eb98f58a685e32.jpg",
+        caption=f"""ʜᴇʟʟᴏ✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
  **ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ɢʀᴏᴜᴘ ᴠɪᴅᴇᴏ ᴄᴀʟʟ !!**
  **ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ 💫**
  **ғᴏʀ ᴀɴʏ ʜᴇʟᴘ ᴊᴏɪɴ @Techno_Trickop , ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ @Herox_xD**""",
@@ -64,23 +65,22 @@ async def start_private(client: Client, message: Message):
                     )
                 ],
                 [InlineKeyboardButton(
-                    "𝙊𝙬𝙣𝙚𝙧", 
-                    url=f"https://t.me/ABHIISH3K_xD"),],
+                    "• Cᴏᴍᴍᴀɴᴅs", callback_data="cb_cmd"),],
                 [
-                    InlineKeyboardButton("📚 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎", url=f"https://t.me/pmpermit/3"),
-                    InlineKeyboardButton("𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧", url=f"https://t.me/herox_xd"),
+                    InlineKeyboardButton("• Oᴡɴᴇʀ", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("• Dᴇᴠᴇʟᴏᴘᴇʀ ", url=f"https://t.me/herox_xd"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👥 𝙎𝙪𝙥𝙥𝙤𝙧𝙩", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "• Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "𝙎𝙤𝙪𝙧𝙘𝙚 𝘾𝙤𝙙𝙚 📎", url="https://github.com/SJMxADITI/TrickyAbhi-Music"
+                        "• Sᴏᴜʀᴄᴇ Cᴏᴅᴇ •", url="https://github.com/SJMxADITI/TrickyMusic"
                     )
                 ],
             ]
@@ -100,15 +100,15 @@ async def start_group(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ 𝙎𝙪𝙥𝙥𝙤𝙧𝙩", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "• Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing music on your Group voice chat** ❤"
+    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝗔𝗱𝗱𝗶𝗻𝗴 𝗺𝗲 𝗵𝗲𝗿𝗲, 𝗳𝗼𝗿 𝗽𝗹𝗮𝘆𝗶𝗻𝗴 𝗺𝘂𝘀𝗶𝗰 𝗼𝗻 𝘆𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 𝘃𝗼𝗶𝗰𝗲 𝗰𝗵𝗮𝘁** ❤"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -126,7 +126,7 @@ async def help(client: Client, message: Message):
 » **press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="❓ Basic Guide", url=f"https://t.me/pmpermit/3")]]
+            [[InlineKeyboardButton(text="❓ Basic Guide", callback_data="cb_cmd")]]
         ),
     )
 
