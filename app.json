@@ -22,7 +22,27 @@
             "description": "fill with your bot username from @BotFather Note put without '@' ",
             "required": true
         },
-        
+        "OWNER_NAME": {
+            "description": "fill YOUR USERNAME WITHOUT '@' .",
+            "value": "ABHIISH3K_xD",
+            "required": false
+        },
+        "ALIVE_NAME": {
+            "description": "PUT YOUR BOT NAME .",
+            "value": "𝗛𝗘𝗥𝗢𝗫 𝗠𝗨𝗦𝗜𝗖",
+            "required": false
+            
+        },
+         "BOT_NAME": {
+            "description": "PUT YOUR BOT NAME.",
+            "value": "𝗛𝗘𝗥𝗢𝗫 𝗠𝗨𝗦𝗜𝗖",
+            "required": true
+        },
+         "DURATION_LIMIT": {
+            "description": "PUT YOUR BOT duration time.",
+            "value": "70",
+            "required": true
+        },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
             "required": true
