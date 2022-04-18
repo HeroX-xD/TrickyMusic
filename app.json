@@ -43,12 +43,27 @@
             "value": "70",
             "required": true
         },
+        "GROUP_SUPPORT": {
+            "description": "PUT YOUR group username without @.",
+            "value": "TrickyAbhii_Op",
+            "required": true
+        },
+        "UPDATES_CHANNEL": {
+            "description": "PUT YOUR channel username without @.",
+            "value": "Techno_Trickop",
+            "required": true
+        },
+    
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
             "required": true
         },
         "API_HASH": {
             "description": "your Api Hash from my.telegram.org/apps",
+            "required": true
+        },
+        "ASSISTANT_NAME": {
+            "description": "fill with the assistant username without @",
             "required": true
         },
         "SUDO_USERS": {
