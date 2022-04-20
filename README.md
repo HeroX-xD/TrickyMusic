@@ -38,7 +38,7 @@ OMFO Gimme a star and follow me
   
 ### Noob Developers 
   
-  <a href="<a href="https://github.com/AnonymousR1025"><img src="https://img.shields.io/badge/pro%20 Anonymous-ReD.svg?style=for-the-badge&logo=Python"></a> 
+ <a href="https://github.com/AnonymousR1025"><img src="https://img.shields.io/badge/pro%20 Anonymous-ReD.svg?style=for-the-badge&logo=Python"></a> 
 
 <a href="https://t.me/herox_xd"><img src="https://img.shields.io/badge/Noob%20 Herox-ReD.svg?style=for-the-badge&logo=Python"></a> 
   
