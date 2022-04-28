@@ -2,7 +2,7 @@ tgcrypto
 asyncio
 ffmpeg-python
 py-tgcalls
-git+https://github.com/pyrogram/pyrogram@master
+pyrogram==1.4.16
 youtube-search-python
 yt-dlp
 speedtest-cli
