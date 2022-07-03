@@ -20,5 +20,7 @@ psutil
 future
 wget
 lyricsgenius
-yt-dlp==2021.11.10.1
+yt-dlp
 skem
+py-tgcalls==0.8.6
+pyyaml==5.3.1
