@@ -1,7 +1,6 @@
 tgcrypto
 asyncio
 ffmpeg-python
-py-tgcalls
 pyrogram==1.4.16
 youtube-search-python
 yt-dlp
@@ -23,4 +22,3 @@ lyricsgenius
 yt-dlp
 skem
 py-tgcalls==0.8.6
-pyyaml==5.3.1
